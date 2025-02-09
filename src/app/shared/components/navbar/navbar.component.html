@@ -1,0 +1,41 @@
+<nav class="navbar">
+  <div class="container mx-auto flex justify-between items-center px-6">
+    <!-- LOGO (Desde CSS) -->
+    <a routerLink="/" class="logo-container hover:scale-105 transition-transform cursor-pointer">
+      <div class="logo"></div>
+      <span class="text-2xl font-bold">Extreme Aventura</span>
+    </a>
+
+    <!-- BOTÓN MENÚ HAMBURGUESA PARA MÓVILES -->
+    <button id="menu-toggle" class="block md:hidden text-white text-3xl focus:outline-none">
+      ☰
+    </button>
+
+    <!-- MENÚ -->
+    <ul id="menu" class="hidden md:flex gap-6 text-lg font-semibold">
+      <li><a routerLink="/" routerLinkActive="active" class="nav-link">Inicio</a></li>
+      <li><a routerLink="/actividades" routerLinkActive="active" class="nav-link">Actividades</a></li>
+      <li><a routerLink="/hotel" routerLinkActive="active" class="nav-link">Hotel</a></li>
+      <li><a routerLink="/reservacion" routerLinkActive="active" class="nav-link">Reservación</a></li>
+      <li><a routerLink="/reservaciones" routerLinkActive="active" class="nav-link">Mis Reservas</a></li>
+      <li><a routerLink="/contacto" routerLinkActive="active" class="nav-link">Contacto</a></li>
+    </ul>
+  </div>
+
+  <!-- MENÚ PARA MÓVILES -->
+  <ul id="mobile-menu" class="hidden flex-col bg-[#FF9002] text-white p-4 space-y-4 mt-2 md:hidden">
+    <li><a routerLink="/" routerLinkActive="active" class="nav-link">Inicio</a></li>
+    <li><a routerLink="/actividades" routerLinkActive="active" class="nav-link">Actividades</a></li>
+    <li><a routerLink="/hotel" routerLinkActive="active" class="nav-link">Hotel</a></li>
+    <li><a routerLink="/reservacion" routerLinkActive="active" class="nav-link">Reservación</a></li>
+    <li><a routerLink="/reservaciones" routerLinkActive="active" class="nav-link">Mis Reservas</a></li>
+    <li><a routerLink="/contacto" routerLinkActive="active" class="nav-link">Contacto</a></li>
+  </ul>
+</nav>
+
+<script>
+  document.getElementById('menu-toggle').addEventListener('click', function() {
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>

@@ -1,1 +1,27 @@
-<p>reservacion works!</p>
+<div class="max-w-lg mx-auto p-6 bg-white shadow-md rounded-lg">
+  <h2 class="text-2xl font-semibold mb-4 text-center">Reserva tu Aventura</h2>
+
+  <form [formGroup]="reservaForm" (ngSubmit)="enviarReservacion()">
+    <label>Nombre:</label>
+    <input type="text" formControlName="nombre" class="input" required>
+
+    <label>Correo:</label>
+    <input type="email" formControlName="correo" class="input" required>
+
+    <label>Teléfono:</label>
+    <input type="tel" formControlName="telefono" class="input" required>
+
+    <label>Fecha de Reservación:</label>
+    <input type="date" formControlName="fecha" class="input" required>
+
+    <label>Número de Personas:</label>
+    <input type="number" formControlName="personas" min="1" max="20" class="input" required>
+
+    <label>Mensaje Adicional:</label>
+    <textarea formControlName="mensaje" class="input"></textarea>
+
+    <button type="submit" class="btn mt-4" [disabled]="reservaForm.invalid">Reservar</button>
+  </form>
+
+  <p *ngIf="mensaje" class="text-green-600 text-center mt-4">{{ mensaje }}</p>
+</div>

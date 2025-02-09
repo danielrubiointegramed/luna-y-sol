@@ -1,0 +1,100 @@
+/* NAVBAR TRANSPARENTE */
+.navbar {
+  background: rgba(255, 144, 2, 0.75); /* Transparencia al 75% */
+  backdrop-filter: blur(12px); /* Efecto difuminado */
+  color: white;
+  padding: 1.5rem 2rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: 100vw;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s ease-in-out;
+}
+
+/* CONTENEDOR DEL LOGO */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* LOGO MÁS GRANDE Y AJUSTADO */
+.logo {
+  width: 90px; /* Tamaño en escritorio */
+  height: 90px;
+  background-image: url('../../../assets/images/logo.png'); /* Ruta del Logo */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+}
+
+/* Estilos de los botones de navegación */
+.nav-link {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  display: block;
+  padding: 0.5rem 1.2rem;
+}
+
+/* Efecto hover */
+.nav-link:hover {
+  color: #402F14;
+  transform: scale(1.1);
+}
+
+/* Página activa */
+.active {
+  font-weight: bold;
+  border-bottom: 2px solid white;
+}
+
+/* RESPONSIVIDAD */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 1.2rem;
+  }
+
+  /* Ajustar tamaño del logo en tablets */
+  .logo {
+    width: 75px;
+    height: 75px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .nav-link {
+    text-align: center;
+    font-size: 1.1rem;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  #mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Ajustar tamaño del logo en móviles */
+  .logo {
+    width: 65px;
+    height: 65px;
+  }
+}

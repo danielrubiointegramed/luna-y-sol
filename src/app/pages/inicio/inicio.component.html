@@ -1,0 +1,50 @@
+<div class="relative w-full h-screen bg-cover bg-center inicio-container">
+  <div class="absolute inset-0 bg-[rgba(0,0,0,0.6)] flex flex-col items-center justify-center text-center px-6">
+      <div class="logoH animate-bounce"></div>
+      <h1 class="text-7xl font-extrabold text-[#FFFAF0] drop-shadow-lg animate-fade-in-up">
+        "Vive Luna y Sol"
+      </h1>
+      <p class="text-xl text-[#FFFAF0] mt-4 font-semibold max-w-2xl animate-fade-in-delayed">
+        Descubre un nuevo mundo. Pisa la tierra, siente el viento. Vive la aventura de tu vida.
+      </p>
+      <div class="mt-8 flex flex-wrap justify-center gap-6 animate-fade-in-up-delayed">
+          <a (click)="navigateTo('/actividades', $event)" class="bg-[#FF9002] text-[#FFFAF0] px-8 py-3 rounded-lg text-lg font-semibold shadow-lg hover:bg-[#402F14] transition-all hover:scale-110 cursor-pointer">
+              Explora Actividades
+          </a>
+          <a (click)="navigateTo('/reservacion', $event)" class="bg-[#7AB829] text-[#FFFAF0] px-8 py-3 rounded-lg text-lg font-semibold shadow-lg hover:bg-[#402F14] transition-all hover:scale-110 cursor-pointer">
+              Reserva tu Aventura
+          </a>
+      </div>
+  </div>
+</div>
+
+<!-- Sección Sobre Nosotros -->
+<section id="sobre-nosotros" class="container mx-auto py-24 text-center bg-[#7AB829] text-[#FFFAF0] animate-fade-in px-8 space-y-6">
+  <h2 class="text-5xl font-bold">Sobre Nosotros</h2>
+  <p class="text-lg max-w-4xl mx-auto leading-relaxed">
+    Somos una comunidad comprometida con la conservación de nuestros recursos naturales y culturales. Nuestro objetivo es ofrecer experiencias turísticas sostenibles que beneficien a nuestra gente y preserven nuestro entorno.
+  </p>
+</section>
+
+<!-- Sección de Actividades -->
+<section id="actividades" class="container mx-auto py-24 text-center bg-[#FFFAF0] text-[#402F14] animate-fade-in-up px-8 space-y-6">
+  <h2 class="text-5xl font-bold">Nuestras Actividades</h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mt-12">
+      <div class="relative group overflow-hidden rounded-lg shadow-lg actividad1 transition-transform hover:scale-110"></div>
+      <div class="relative group overflow-hidden rounded-lg shadow-lg actividad2 transition-transform hover:scale-110"></div>
+      <div class="relative group overflow-hidden rounded-lg shadow-lg actividad3 transition-transform hover:scale-110"></div>
+  </div>
+</section>
+
+<!-- Sección de Reservación -->
+<section id="reservacion" class="container mx-auto py-24 text-center bg-[#7AB829] text-[#FFFAF0] animate-fade-in-up px-8 space-y-6">
+  <h2 class="text-5xl font-bold">¡Reserva tu Experiencia!</h2>
+  <p class="text-lg max-w-4xl mx-auto leading-relaxed">
+      No pierdas la oportunidad de vivir una aventura increíble. Reserva ahora y asegura tu lugar en una experiencia única.
+  </p>
+  <div class="mt-10">
+      <a (click)="navigateTo('/reservacion', $event)" class="bg-[#FF9002] text-[#FFFAF0] px-10 py-4 rounded-lg text-xl font-semibold shadow-lg hover:bg-[#402F14] transition-all hover:scale-110 cursor-pointer">
+          Reservar Ahora
+      </a>
+  </div>
+</section>

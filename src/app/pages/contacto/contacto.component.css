@@ -1,22 +1,31 @@
-.reservacion-container {
-    max-width: 600px;
+/* CONTENEDOR PRINCIPAL */
+.contacto-container {
+    max-width: 900px;
     margin: 40px auto;
     padding: 30px;
-    background: #FFFFFF;
+    background: white;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
     border-radius: 12px;
+    text-align: center;
 }
 
-/* TÍTULO */
-h2 {
-    font-size: 1.8rem;
+/* TITULOS */
+.contacto-container h2 {
+    font-size: 2.5rem;
     font-weight: bold;
     color: #402F14;
-    text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 1.5rem;
 }
 
-/* INPUTS */
+/* FORMULARIO */
+.contacto-form {
+    background: #FFFAF0;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* INPUTS Y TEXTAREA */
 .input {
     width: 100%;
     padding: 12px;
@@ -52,10 +61,30 @@ h2 {
     transform: scale(1.05);
 }
 
-/* MENSAJE */
-p {
-    margin-top: 15px;
+/* MAPA */
+.contacto-mapa {
     text-align: center;
-    color: #402F14;
-    font-weight: bold;
+}
+
+.mapa {
+    width: 100%;
+    height: 300px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* RESPONSIVIDAD */
+@media (max-width: 768px) {
+    .contacto-container {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    .contacto-form {
+        padding: 15px;
+    }
+
+    .mapa {
+        height: 250px;
+    }
 }

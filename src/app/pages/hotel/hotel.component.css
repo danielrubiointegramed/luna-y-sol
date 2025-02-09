@@ -1,0 +1,98 @@
+/* CONTENEDOR PRINCIPAL */
+.hotel-container {
+  background-color: #7AB829;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+/* TITULO PRINCIPAL */
+.hotel-container h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #FFFAF0;
+  margin-bottom: 1.5rem;
+}
+
+.hotel-container p {
+  font-size: 1.3rem;
+  color: #FFFAF0;
+  margin-bottom: 2.5rem;
+}
+
+/* ESTILOS DE CADA HABITACIÓN */
+.hotel-container .group {
+  height: 400px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+/* EFECTO HOVER */
+.hotel-container .group:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* IMÁGENES */
+.hotel-container img {
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* FONDO OSCURO PARA TEXTO */
+.hotel-container .group div {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1.5rem;
+  color: white;
+  text-align: center;
+  transition: background 0.3s ease-in-out;
+}
+
+/* EFECTO HOVER SOBRE TEXTO */
+.hotel-container .group:hover div {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* RESPONSIVIDAD */
+@media (max-width: 1024px) {
+  .hotel-container {
+      padding: 4rem 1.5rem;
+  }
+
+  .hotel-container .group {
+      height: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hotel-container {
+      padding: 3rem 1rem;
+  }
+
+  .hotel-container .group {
+      height: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hotel-container {
+      padding: 2.5rem 0.5rem;
+  }
+
+  .hotel-container .group {
+      height: 250px;
+  }
+
+  .hotel-container h1 {
+      font-size: 2rem;
+  }
+
+  .hotel-container p {
+      font-size: 1.1rem;
+  }
+}

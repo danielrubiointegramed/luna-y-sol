@@ -1,0 +1,13 @@
+<div class="reservaciones-container">
+  <h2 class="text-2xl font-semibold">Reservaciones Realizadas</h2>
+
+  <ul class="reservaciones-lista">
+    <li *ngFor="let reserva of reservas" class="reservacion-item">
+      <p><strong>Nombre:</strong> {{ reserva.nombre }}</p>
+      <p><strong>Fecha:</strong> {{ reserva.fecha | date:'longDate' }}</p>
+      <p><strong>Personas:</strong> {{ reserva.personas }}</p>
+    </li>
+  </ul>
+
+  <p *ngIf="reservas.length === 0" class="text-gray-500">No hay reservaciones registradas.</p>
+</div>

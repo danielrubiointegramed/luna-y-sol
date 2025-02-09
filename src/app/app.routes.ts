@@ -1,15 +1,17 @@
 import { Routes } from '@angular/router';
-import { provideRouter } from '@angular/router';
-
-import { ContactanosComponent } from './pages/contactanos/contactanos.component';
-import { ExploraComponent } from './pages/explora/explora.component';
-import { GraciasComponent } from './pages/gracias/gracias.component';
+import { InicioComponent } from './pages/inicio/inicio.component';
+import { ActividadesComponent } from './pages/actividades/actividades.component';
+import { HotelComponent } from './pages/hotel/hotel.component';
 import { ReservacionComponent } from './pages/reservacion/reservacion.component';
+import { ContactoComponent } from './pages/contacto/contacto.component';
+import { ReservacionesComponent } from './pages/reservaciones/reservaciones.component';
 
 export const routes: Routes = [
-  { path: 'contactanos', component: ContactanosComponent },
-  { path: 'explora', component: ExploraComponent },
-  { path: 'gracias', component: GraciasComponent },
+  { path: '', component: InicioComponent, pathMatch: 'full' },
+  { path: 'actividades', component: ActividadesComponent },
+  { path: 'hotel', component: HotelComponent },
   { path: 'reservacion', component: ReservacionComponent },
-  { path: '**', redirectTo: 'contactanos' } // Redirección por defecto
+  { path: 'contacto', component: ContactoComponent },
+  { path: 'reservaciones', component: ReservacionesComponent },
+  { path: '**', redirectTo: '', pathMatch: 'full' } // Redirección a inicio
 ];
