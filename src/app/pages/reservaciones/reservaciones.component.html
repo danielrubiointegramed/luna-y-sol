@@ -1,13 +1,33 @@
-<div class="reservaciones-container">
-  <h2 class="text-2xl font-semibold">Reservaciones Realizadas</h2>
+<div class="reservaciones-container" *ngIf="reserva; else noReserva">
+  <div class="icono-confirmacion">
+    <img src="https://cdn-icons-png.flaticon.com/512/148/148767.png" alt="Reserva Confirmada">
+  </div>
 
-  <ul class="reservaciones-lista">
-    <li *ngFor="let reserva of reservas" class="reservacion-item">
-      <p><strong>Nombre:</strong> {{ reserva.nombre }}</p>
-      <p><strong>Fecha:</strong> {{ reserva.fecha | date:'longDate' }}</p>
-      <p><strong>Personas:</strong> {{ reserva.personas }}</p>
-    </li>
-  </ul>
+  <h2 class="titulo">¡Tu reservación ha sido confirmada! 🎉</h2>
+  <p class="subtitulo">Gracias por reservar con nosotros. Nos vemos pronto para una experiencia inolvidable.</p>
 
-  <p *ngIf="reservas.length === 0" class="text-gray-500">No hay reservaciones registradas.</p>
+  <div class="reserva-detalle">
+    <h3>Detalles de tu reservación</h3>
+    <div class="info">
+      <p><strong>📛 Nombre:</strong> {{ reserva.nombre }}</p>
+      <p><strong>📩 Correo:</strong> {{ reserva.correo }}</p>
+      <p><strong>📞 Teléfono:</strong> {{ reserva.telefono }}</p>
+      <p><strong>📅 Fecha:</strong> {{ reserva.fecha | date:'longDate' }}</p>
+      <p><strong>👥 Personas:</strong> {{ reserva.personas }}</p>
+      <p><strong>📝 Mensaje:</strong> {{ reserva.mensaje || 'Sin mensaje adicional' }}</p>
+    </div>
+  </div>
+
+  <div class="boton-container">
+    <a routerLink="/" class="btn">🏠 Volver al Inicio</a>
+  </div>
 </div>
+
+<!-- Mensaje en caso de que no haya reservaciones -->
+<ng-template #noReserva>
+  <div class="no-reservas">
+    <h2 class="titulo">No tienes reservaciones registradas 😢</h2>
+    <p class="subtitulo">Haz una reservación y vuelve aquí para verla.</p>
+    <a routerLink="/reservacion" class="btn">📝 Hacer una Reservación</a>
+  </div>
+</ng-template>

@@ -8,11 +8,11 @@
         Descubre un nuevo mundo. Pisa la tierra, siente el viento. Vive la aventura de tu vida.
       </p>
       <div class="mt-8 flex flex-wrap justify-center gap-6 animate-fade-in-up-delayed">
-          <a (click)="navigateTo('/actividades', $event)" class="bg-[#FF9002] text-[#FFFAF0] px-8 py-3 rounded-lg text-lg font-semibold shadow-lg hover:bg-[#402F14] transition-all hover:scale-110 cursor-pointer">
-              Explora Actividades
+          <a (click)="navigateTo('/actividades', $event)" class="btn-explora">
+              🌄 Explora Actividades
           </a>
-          <a (click)="navigateTo('/reservacion', $event)" class="bg-[#7AB829] text-[#FFFAF0] px-8 py-3 rounded-lg text-lg font-semibold shadow-lg hover:bg-[#402F14] transition-all hover:scale-110 cursor-pointer">
-              Reserva tu Aventura
+          <a (click)="navigateTo('/reservacion', $event)" class="btn-reserva">
+              🏕️ Reserva tu Aventura
           </a>
       </div>
   </div>
@@ -36,6 +36,29 @@
   </div>
 </section>
 
+<!-- Sección Video Destacado -->
+<section id="video-destacado" class="container mx-auto py-24 text-center bg-[#402F14] text-[#FFFAF0] animate-fade-in px-8 space-y-6">
+  <h2 class="text-5xl font-bold">¡Vuela por la Barranca de Metztitlán!</h2>
+  <p class="text-lg max-w-4xl mx-auto leading-relaxed">
+    Descubre esta increíble experiencia extrema en San Pablo Tetlapayac.
+  </p>
+
+  <div class="video-container">
+      <iframe width="560" height="315" 
+          src="https://www.youtube.com/embed/0Tb8aesw4y4?si=29u1K2gvBfysMet7" 
+          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+      </iframe>
+  </div>
+
+  <div class="mt-6">
+      <a href="https://www.mexicodesconocido.com.mx/vuela-por-la-barranca-de-metztitlan-en-san-pablo-tetlapayac.html" 
+         target="_blank" class="btn-mas">
+          🔗 Leer más sobre esta aventura
+      </a>
+  </div>
+</section>
+
 <!-- Sección de Reservación -->
 <section id="reservacion" class="container mx-auto py-24 text-center bg-[#7AB829] text-[#FFFAF0] animate-fade-in-up px-8 space-y-6">
   <h2 class="text-5xl font-bold">¡Reserva tu Experiencia!</h2>
@@ -43,7 +66,7 @@
       No pierdas la oportunidad de vivir una aventura increíble. Reserva ahora y asegura tu lugar en una experiencia única.
   </p>
   <div class="mt-10">
-      <a (click)="navigateTo('/reservacion', $event)" class="bg-[#FF9002] text-[#FFFAF0] px-10 py-4 rounded-lg text-xl font-semibold shadow-lg hover:bg-[#402F14] transition-all hover:scale-110 cursor-pointer">
+      <a (click)="navigateTo('/reservacion', $event)" class="btn-reserva">
           Reservar Ahora
       </a>
   </div>

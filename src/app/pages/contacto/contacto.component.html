@@ -1,37 +1,48 @@
-<div class="contacto-container">
-    <h2 class="text-3xl font-bold text-[#402F14] text-center mb-6">Contáctanos</h2>
-    <p class="text-lg text-[#402F14] text-center mb-8">Estamos aquí para resolver tus dudas y ayudarte a planear tu próxima aventura.</p>
-  
+<div class="contacto-wrapper">
+  <div class="contacto-container">
+    <h2 class="titulo">📞 ¡Contáctanos Ahora!</h2>
+    <p class="subtitulo">Estamos aquí para resolver tus dudas y ayudarte a planear tu próxima aventura.</p>
+
     <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
       <!-- Formulario de Contacto -->
       <div class="contacto-form">
+        <h3 class="form-titulo" >Envíanos un mensaje</h3>
         <form [formGroup]="contactoForm" (ngSubmit)="enviarContacto()">
-          <label>Nombre:</label>
+          <label>👤 Nombre:</label>
           <input type="text" formControlName="nombre" class="input" required>
-  
-          <label>Correo Electrónico:</label>
+
+          <label>📧 Correo Electrónico:</label>
           <input type="email" formControlName="correo" class="input" required>
-  
-          <label>Mensaje:</label>
+
+          <label>💬 Mensaje:</label>
           <textarea formControlName="mensaje" class="input" required></textarea>
-  
-          <button type="submit" class="btn mt-4" [disabled]="contactoForm.invalid">Enviar</button>
+
+          <button type="submit" class="btn mt-4" [disabled]="contactoForm.invalid">📩 Enviar Mensaje</button>
         </form>
-  
-        <p *ngIf="mensaje" class="text-green-600 text-center mt-4">{{ mensaje }}</p>
+
+        <p *ngIf="mensaje" class="mensaje-exito">{{ mensaje }}</p>
       </div>
-  
+
       <!-- Ubicación / Mapa -->
       <div class="contacto-mapa">
-        <h3 class="text-xl font-semibold text-[#402F14] mb-4">Nuestra Ubicación</h3>
+        <h3 class="mapa-titulo">📍 Nuestra Ubicación</h3>
         <iframe 
           class="mapa"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.1234541467327!2d-99.1332!3d19.432608"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14934.904300628872!2d-98.93113305581231!3d20.640019275140965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d145f1d12f741f%3A0x6cac3ca1e41ae128!2s43373%20San%20Pablo%20Tetlapayac%2C%20Hgo.!5e0!3m2!1ses-419!2smx!4v1739127603000!5m2!1ses-419!2smx"
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade">
         </iframe>
+
+        <div class="info-contacto">
+          <p><strong>📩 Correo:</strong> lunaysolextreme&#64;gmail.com</p>
+          <p><strong>📍 Dirección:</strong> San Pablo Tetlapayac, Hidalgo, México</p>
+          <p><strong>📞 Teléfono:</strong> <a href="tel:+527711234567" class="contacto-enlace">(+52) 771-123-4567</a></p>
+          <p><strong>💬 WhatsApp:</strong> 
+            <a href="https://wa.me/527711234567" target="_blank" class="btn-whatsapp">📲 Enviar Mensaje</a>
+          </p>
+        </div>
       </div>
     </div>
   </div>
-  
+</div>

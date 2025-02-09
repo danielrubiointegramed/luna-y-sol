@@ -7,14 +7,15 @@
 
 
 .logoH {
+  padding: 10;
   display: inline-block;
-  width: 750px;
-  height: 750px;
+  width: 850px;
+  height: 850px;
   background-image: url('../../assets/images/logoH.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  margin-bottom: 1px;
+  margin-bottom: px;
   animation: pulse 2s infinite;
 }
 
@@ -40,15 +41,15 @@
 
 
 .actividad1 {
-  background-image: url('../../assets/images/actividades/aventura.jpg');
+  background-image: url('../../assets/images/actividades/bien.jpg');
 }
 
 .actividad2 {
-  background-image: url('../../assets/images/actividades/aventura.jpg');
+  background-image: url('../../assets/images/principal.jpg');
 }
 
 .actividad3 {
-  background-image: url('../../assets/images/actividades/aventura.jpg');
+  background-image: url('../../assets/images/actividades/reservacion.jpg');
 }
 
 @keyframes wiggle {
@@ -61,4 +62,45 @@
 
 a:hover {
   animation: wiggle 0.3s ease-in-out;
+}
+/* 🔥 Sección Video Destacado */
+.video-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.btn-mas {
+  background-color: #FF9002;
+  color: white;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+  box-shadow: 0 5px 15px rgba(255, 144, 2, 0.5);
+}
+
+.btn-mas:hover {
+  background-color: #d67c00;
+  transform: scale(1.05);
+}
+
+/* 🎯 Botones de Exploración */
+.btn-explora, .btn-reserva {
+  background: linear-gradient(to right, #FF9002, #d67c00);
+  color: #FFFAF0;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+  box-shadow: 0 5px 15px rgba(255, 144, 2, 0.5);
+  cursor: pointer;
+}
+
+.btn-explora:hover, .btn-reserva:hover {
+  background: linear-gradient(to right, #402F14, #5a9219);
+  transform: scale(1.05);
 }

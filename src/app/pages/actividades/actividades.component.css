@@ -1,99 +1,116 @@
 /* CONTENEDOR PRINCIPAL */
 .actividades-container {
-    background-color: #FFFAF0;
-    padding: 5rem 2rem;
+    background: linear-gradient(to bottom, #7AB829, #5a9219); /* Fondo degradado */
+    padding: 6rem 2rem; /* ⬅ Aumentamos el padding superior para bajarlo */
     text-align: center;
-}
-
-/* TITULO PRINCIPAL */
-.actividades-container h1 {
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 120px; /* ⬅ Bajamos aún más para evitar la navbar */
+  }
+  
+  /* TÍTULOS */
+  .titulo {
     font-size: 2.8rem;
     font-weight: bold;
-    color: #402F14;
-    margin-bottom: 1.5rem;
-}
-
-.actividades-container p {
-    font-size: 1.3rem;
-    color: #402F14;
-    margin-bottom: 2.5rem;
-}
-
-/* ESTILOS DE CADA ACTIVIDAD */
-.actividades-container .group {
+    color: #FFFAF0;
+    margin-bottom: 10px;
+  }
+  
+  .subtitulo {
+    font-size: 1.2rem;
+    color: #FFFAF0;
+    margin-bottom: 25px;
+  }
+  
+  /* ACTIVIDADES */
+  .actividad {
     height: 400px;
     border-radius: 12px;
     overflow: hidden;
     position: relative;
     transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
-}
-
-/* IMÁGENES */
-.actividades-container img {
-    object-fit: cover;
-    transition: transform 0.3s ease-in-out;
-}
-
-/* EFECTO HOVER */
-.actividades-container .group:hover {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* EFECTO HOVER */
+  .actividad:hover {
     transform: scale(1.05);
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
-}
-
-/* FONDO OSCURO PARA TEXTO */
-.actividades-container .group div {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 1.5rem;
-    color: white;
-    text-align: center;
+  }
+  
+  /* ESTILOS DEL TEXTO SOBRE IMAGEN */
+  .info {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 12px;
+    width: 90%;
     transition: background 0.3s ease-in-out;
-    z-index: 10;
-}
-
-/* EFECTO HOVER SOBRE TEXTO */
-.actividades-container .group:hover div {
-    background: rgba(0, 0, 0, 0.7);
-}
-
-/* RESPONSIVIDAD */
-@media (max-width: 1024px) {
+  }
+  
+  .actividad:hover .info {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* IMÁGENES DESDE CSS */
+  .actividad-rafting {
+    background-image: url('../../assets/images/actividades/tirolesa.jpg');
+  }
+  
+  .actividad-parapente {
+    background-image: url('../../assets/images/actividades/Zip-Bike.jpg');
+  }
+  
+  .actividad-escalada {
+    background-image: url('../../assets/images/actividades/caminata.jpg');
+  }
+  
+  /* RESPONSIVIDAD */
+  @media (max-width: 1024px) {
     .actividades-container {
-        padding: 4rem 1.5rem;
+        padding: 5rem 1.5rem;
+        margin-top: 100px; /* ⬅ Ajustamos margen para pantallas medianas */
     }
-
-    .actividades-container .group {
+  
+    .actividad {
         height: 320px;
     }
-}
-
-@media (max-width: 768px) {
+  }
+  
+  @media (max-width: 768px) {
     .actividades-container {
-        padding: 3rem 1rem;
+        padding: 4rem 1rem;
+        margin-top: 90px; /* ⬅ Bajamos más en pantallas pequeñas */
     }
-
-    .actividades-container .group {
+  
+    .actividad {
         height: 280px;
     }
-}
-
-@media (max-width: 480px) {
+  }
+  
+  @media (max-width: 480px) {
     .actividades-container {
-        padding: 2.5rem 0.5rem;
+        padding: 3.5rem 0.5rem;
+        margin-top: 80px; /* ⬅ Ajustamos margen en móviles */
     }
-
-    .actividades-container .group {
+  
+    .actividad {
         height: 250px;
     }
-
-    .actividades-container h1 {
+  
+    .titulo {
         font-size: 2rem;
     }
-
-    .actividades-container p {
-        font-size: 1.1rem;
+  
+    .subtitulo {
+        font-size: 1rem;
     }
-}
+  }
+  
