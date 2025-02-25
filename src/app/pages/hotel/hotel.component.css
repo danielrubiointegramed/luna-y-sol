@@ -80,15 +80,15 @@
 
 /* IMÁGENES DESDE CSS */
 .habitacion-premium {
-  background-image: url('../../assets/images/actividades/familiar.jpg');
+  background-image: url('/luna-y-sol/browser/media/familiar.jpg');
 }
 
 .habitacion-cabana {
-  background-image: url('../../assets/images/actividades/relax.jpg');
+  background-image: url('/luna-y-sol/browser/media/relax.jpg');
 }
 
 .habitacion-suite {
-  background-image: url('../../assets/images/actividades/campar.jpg');
+  background-image: url('/luna-y-sol/browser/media/campar.jpg');
 }
 
 /* BOTÓN DE RESERVACIÓN */

@@ -11,7 +11,7 @@
   display: inline-block;
   width: 850px;
   height: 850px;
-  background-image: url('../../assets/images/logoH.png');
+  background-image: url('/luna-y-sol/browser/media/logoh.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -41,15 +41,15 @@
 
 
 .actividad1 {
-  background-image: url('../../assets/images/actividades/bien.jpg');
+  background-image: url('/luna-y-sol/browser/media/bien.jpg');
 }
 
 .actividad2 {
-  background-image: url('../../assets/images/principal.jpg');
+  background-image: url('/luna-y-sol/browser/media/principal.jpg');
 }
 
 .actividad3 {
-  background-image: url('../../assets/images/actividades/reservacion.jpg');
+  background-image: url('/luna-y-sol/browser/media/reservacion.jpg');
 }
 
 @keyframes wiggle {

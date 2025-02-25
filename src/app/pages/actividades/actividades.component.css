@@ -7,7 +7,7 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     margin-top: 120px; /* ⬅ Bajamos aún más para evitar la navbar */
   }
-  
+
   /* TÍTULOS */
   .titulo {
     font-size: 2.8rem;
@@ -15,13 +15,13 @@
     color: #FFFAF0;
     margin-bottom: 10px;
   }
-  
+
   .subtitulo {
     font-size: 1.2rem;
     color: #FFFAF0;
     margin-bottom: 25px;
   }
-  
+
   /* ACTIVIDADES */
   .actividad {
     height: 400px;
@@ -39,13 +39,13 @@
     background-size: cover;
     background-position: center;
   }
-  
+
   /* EFECTO HOVER */
   .actividad:hover {
     transform: scale(1.05);
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
   }
-  
+
   /* ESTILOS DEL TEXTO SOBRE IMAGEN */
   .info {
     background: rgba(0, 0, 0, 0.6);
@@ -54,63 +54,62 @@
     width: 90%;
     transition: background 0.3s ease-in-out;
   }
-  
+
   .actividad:hover .info {
     background: rgba(0, 0, 0, 0.8);
   }
-  
+
   /* IMÁGENES DESDE CSS */
   .actividad-rafting {
-    background-image: url('../../assets/images/actividades/tirolesa.jpg');
+    background-image: url('/luna-y-sol/browser/media/tirolesa.jpg');
   }
-  
+
   .actividad-parapente {
-    background-image: url('../../assets/images/actividades/Zip-Bike.jpg');
+    background-image: url('/luna-y-sol/browser/media/Zip-Bike.jpg');
   }
-  
+
   .actividad-escalada {
-    background-image: url('../../assets/images/actividades/caminata.jpg');
+    background-image: url('/luna-y-sol/browser/media/caminata.jpg');
   }
-  
+
   /* RESPONSIVIDAD */
   @media (max-width: 1024px) {
     .actividades-container {
         padding: 5rem 1.5rem;
         margin-top: 100px; /* ⬅ Ajustamos margen para pantallas medianas */
     }
-  
+
     .actividad {
         height: 320px;
     }
   }
-  
+
   @media (max-width: 768px) {
     .actividades-container {
         padding: 4rem 1rem;
         margin-top: 90px; /* ⬅ Bajamos más en pantallas pequeñas */
     }
-  
+
     .actividad {
         height: 280px;
     }
   }
-  
+
   @media (max-width: 480px) {
     .actividades-container {
         padding: 3.5rem 0.5rem;
         margin-top: 80px; /* ⬅ Ajustamos margen en móviles */
     }
-  
+
     .actividad {
         height: 250px;
     }
-  
+
     .titulo {
         font-size: 2rem;
     }
-  
+
     .subtitulo {
         font-size: 1rem;
     }
   }
-  

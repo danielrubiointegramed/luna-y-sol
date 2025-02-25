@@ -4,7 +4,7 @@
     padding: .1rem 0;
     text-align: center;
   }
-  
+
   /* CONTENEDOR FLEXIBLE */
   .container {
     max-width: 1200px;
@@ -14,30 +14,30 @@
     align-items: center;
     justify-content: space-between;
   }
-  
+
   /* LOGO DEL FOOTER */
   .footer-logo {
     width: 100px;
     height: 100px;
-    background-image: url('../../../assets/images/logo.png'); /* Ruta del logo */
+    background-image: url('/luna-y-sol/browser/media/logo.png'); /* Ruta del logo */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
   }
-  
+
   /* TEXTO COPYRIGHT */
   .footer p {
     color: white;
     font-size: 1rem;
     font-weight: 500;
   }
-  
+
   /* REDES SOCIALES */
   .social-icons {
     display: flex;
     gap: 15px;
   }
-  
+
   /* ICONOS DE REDES (Facebook, Instagram, WhatsApp) */
   .social-link {
     width: 40px;
@@ -46,39 +46,38 @@
     background-repeat: no-repeat;
     transition: transform 0.3s ease-in-out;
   }
-  
+
   .facebook {
-    background-image: url('../../../assets/images/icons/facebook.png');
+    background-image: url('/luna-y-sol/browser/media/facebook.png');
   }
-  
+
   .instagram {
-    background-image: url('../../../assets/images/icons/instagram.png');
+    background-image: url('/luna-y-sol/browser/media/instagram.png');
   }
-  
+
   .whatsapp {
-    background-image: url('../../../assets/images/icons/whatsapp.png');
+    background-image: url('/luna-y-sol/browser/media/whatsapp.png');
   }
-  
+
   /* EFECTO HOVER */
   .social-link:hover {
     transform: scale(1.2);
   }
-  
+
   /* RESPONSIVIDAD */
   @media (max-width: 768px) {
     .container {
       flex-direction: column;
       gap: 20px;
     }
-  
+
     .footer-logo {
       width: 80px;
       height: 80px;
     }
-  
+
     .social-link {
       width: 35px;
       height: 35px;
     }
   }
-  

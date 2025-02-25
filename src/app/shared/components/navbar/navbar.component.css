@@ -27,7 +27,7 @@
 .logo {
   width: 90px; /* Tamaño en escritorio */
   height: 90px;
-  background-image: url('../../../assets/images/logo.png'); /* Ruta del Logo */
+  background-image: url('/luna-y-sol/browser/media/logo.png'); /* Ruta del Logo */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

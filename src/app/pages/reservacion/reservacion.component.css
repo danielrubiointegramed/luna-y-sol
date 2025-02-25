@@ -100,7 +100,7 @@
 
 /* 🌄 FONDO CON MÁS CONTRASTE */
 body {
-  background: url('../../assets/images/actividades/reservacion.jpg') no-repeat center center fixed;
+  background: url('/luna-y-sol/browser/media/reservacion.jpg') no-repeat center center fixed;
   background-size: cover;
   filter: brightness(95%);
 }
