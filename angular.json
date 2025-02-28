@@ -32,7 +32,7 @@
           "configurations": {
             "production": {
               "outputHashing": "all",
-              "baseHref": "/",
+              "baseHref": "/luna-y-sol/",
               "budgets": [
                 {
                   "type": "initial",
