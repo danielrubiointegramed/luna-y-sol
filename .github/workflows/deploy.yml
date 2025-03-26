@@ -1,37 +1,28 @@
-name: Deploy Angular to GitHub Pages
+name: Build and Deploy Angular
 
 on:
   push:
     branches:
-      - main  # Cambia si tu rama principal se llama diferente
+      - main
 
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
     steps:
-      # 1. Descarga el código del repositorio
       - name: Check out the repository
         uses: actions/checkout@v3
 
-      # 2. Configura Node.js (versión recomendada)
       - name: Use Node.js 16
         uses: actions/setup-node@v3
         with:
           node-version: 16
 
-      # 3. Instala dependencias
-      #    (asume que package.json está en la raíz;
-      #     si está en subcarpeta, ve la sección "Si tu proyecto está en subcarpeta")
       - name: Install dependencies
         run: npm install
 
-      # 4. Compila tu proyecto Angular
-      #    Usa npx para que no dé error si Angular CLI no está instalado globalmente
       - name: Build Angular
         run: npx ng build --configuration production --base-href /luna-y-sol/
 
-      # 5. Despliega en GitHub Pages
-      #    La carpeta 'docs' es donde se generan los archivos (según tu angular.json)
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
