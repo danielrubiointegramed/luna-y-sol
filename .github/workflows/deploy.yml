@@ -1,41 +1,38 @@
-name: Build and Deploy Angular (luna-y-sol)
+name: Deploy Angular to GitHub Pages
 
 on:
   push:
     branches:
-      - main  # Cambia a 'master' si tu rama principal se llama así
+      - main  # Cambia si tu rama principal se llama diferente
 
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
-
     steps:
-      # 1. Clonar el repositorio
+      # 1. Descarga el código del repositorio
       - name: Check out the repository
         uses: actions/checkout@v3
 
-      # 2. Configurar Node.js
+      # 2. Configura Node.js (versión recomendada)
       - name: Use Node.js 16
         uses: actions/setup-node@v3
         with:
           node-version: 16
 
-      # 3. Instalar dependencias
+      # 3. Instala dependencias
+      #    (asume que package.json está en la raíz;
+      #     si está en subcarpeta, ve la sección "Si tu proyecto está en subcarpeta")
       - name: Install dependencies
         run: npm install
 
-      # 4. Instalar Angular CLI
-      - name: Install Angular CLI
-        run: npm install -g @angular/cli
+      # 4. Compila tu proyecto Angular
+      #    Usa npx para que no dé error si Angular CLI no está instalado globalmente
+      - name: Build Angular
+        run: npx ng build --configuration production --base-href /luna-y-sol/
 
-      # 5. Compilar la aplicación Angular
-      #    Se sobrescribe el baseHref para asegurar que apunte a '/luna-y-sol/'
-      - name: Build Angular app
-        run: ng build --configuration production --base-href /luna-y-sol/
-
-      # 6. Desplegar en GitHub Pages
-      #    Se publica el contenido de la carpeta 'docs'
-      - name: Deploy to GitHub Pages
+      # 5. Despliega en GitHub Pages
+      #    La carpeta 'docs' es donde se generan los archivos (según tu angular.json)
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
