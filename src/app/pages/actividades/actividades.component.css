@@ -61,15 +61,15 @@
 
   /* IMÁGENES DESDE CSS */
   .actividad-rafting {
-    background-image: url('/luna-y-sol/browser/media/tirolesa.jpg');
+    background-image: url('/assets/images/actividades/tirolesa.jpg');
   }
 
   .actividad-parapente {
-    background-image: url('/luna-y-sol/browser/media/Zip-Bike.jpg');
+    background-image: url('/assets/images/actividades/Zip-Bike.jpg');
   }
 
   .actividad-escalada {
-    background-image: url('/luna-y-sol/browser/media/caminata.jpg');
+    background-image: url('/assets/images/actividades/caminata.jpg');
   }
 
   /* RESPONSIVIDAD */

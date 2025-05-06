@@ -7,7 +7,11 @@
     </a>
 
     <!-- BOTÓN MENÚ HAMBURGUESA PARA MÓVILES -->
-    <button id="menu-toggle" (click)="toggleMenu()" class="block md:hidden text-white text-3xl focus:outline-none">
+    <button
+      id="menu-toggle"
+      (click)="toggleMenu()"
+      class="block md:hidden text-white text-3xl focus:outline-none"
+    >
       ☰
     </button>
 
@@ -22,15 +26,65 @@
     </ul>
   </div>
 
-  <!-- MENÚ PARA MÓVILES -->
-  @if (showMobileMenu) {
-  <ul id="mobile-menu" class="flex flex-col bg-[#7AB829] text-white p-4 space-y-4 mt-2 md:hidden">
-    <li><a routerLink="/" routerLinkActive="active" (click)="navigateTo('/', $event)" class="nav-link">Inicio</a></li>
-    <li><a routerLink="/actividades" routerLinkActive="active" (click)="navigateTo('/actividades', $event)" class="nav-link">Actividades</a></li>
-    <li><a routerLink="/hotel" routerLinkActive="active" (click)="navigateTo('/hotel', $event)" class="nav-link">Hotel</a></li>
-    <li><a routerLink="/reservacion" routerLinkActive="active" (click)="navigateTo('/reservacion', $event)" class="nav-link">Reservación</a></li>
-    <li><a routerLink="/reservaciones" routerLinkActive="active" (click)="navigateTo('/reservaciones', $event)" class="nav-link">Mis Reservas</a></li>
-    <li><a routerLink="/contacto" routerLinkActive="active" (click)="navigateTo('/contacto', $event)" class="nav-link">Contacto</a></li>
+  <!-- MENÚ PARA MÓVILES (aparece sólo si showMobileMenu=true) -->
+  <ul
+    *ngIf="showMobileMenu"
+    id="mobile-menu"
+    class="flex flex-col bg-[#7AB829] text-white p-4 space-y-4 mt-2 md:hidden"
+  >
+    <li>
+      <a
+        routerLink="/"
+        routerLinkActive="active"
+        (click)="navigateTo('/', $event)"
+        class="nav-link"
+        >Inicio</a
+      >
+    </li>
+    <li>
+      <a
+        routerLink="/actividades"
+        routerLinkActive="active"
+        (click)="navigateTo('/actividades', $event)"
+        class="nav-link"
+        >Actividades</a
+      >
+    </li>
+    <li>
+      <a
+        routerLink="/hotel"
+        routerLinkActive="active"
+        (click)="navigateTo('/hotel', $event)"
+        class="nav-link"
+        >Hotel</a
+      >
+    </li>
+    <li>
+      <a
+        routerLink="/reservacion"
+        routerLinkActive="active"
+        (click)="navigateTo('/reservacion', $event)"
+        class="nav-link"
+        >Reservación</a
+      >
+    </li>
+    <li>
+      <a
+        routerLink="/reservaciones"
+        routerLinkActive="active"
+        (click)="navigateTo('/reservaciones', $event)"
+        class="nav-link"
+        >Mis Reservas</a
+      >
+    </li>
+    <li>
+      <a
+        routerLink="/contacto"
+        routerLinkActive="active"
+        (click)="navigateTo('/contacto', $event)"
+        class="nav-link"
+        >Contacto</a
+      >
+    </li>
   </ul>
-}
 </nav>

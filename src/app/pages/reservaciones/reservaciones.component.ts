@@ -13,6 +13,17 @@ import { Router } from '@angular/router';
 export class ReservacionesComponent implements OnInit {
   reserva: any = null;
   qrData: string = ''; // Datos para el QR
+   // Define aquí tus rutas de imagen como propiedades
+   public iconWhatsapp = 'assets/images/whatsapp.png';
+   public iconInstagram = 'assets/images/instagram.png';
+   public iconFacebook  = 'assets/images/facebook.png';
+   onImgLoad(ev: Event) {
+    console.log('Imagen cargada:', (ev.target as HTMLImageElement).src);
+  }
+
+  onImgError(ev: Event) {
+    console.error('Error cargando imagen:', (ev.target as HTMLImageElement).src);
+  }
 
   constructor(private router: Router) {}
 

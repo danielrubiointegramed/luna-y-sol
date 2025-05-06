@@ -1,35 +1,28 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router }    from '@angular/router';
+import { CommonModule } from '@angular/common';    // <-- NgIf, NgFor,...
+import { RouterModule } from '@angular/router';     // <-- routerLink, routerLinkActive
 
 @Component({
   selector: 'app-navbar',
+  standalone: true,                              // <-- lo hacemos standalone
+  imports: [ CommonModule, RouterModule ],        // <-- aquí los módulos
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  showMobileMenu = false; // Estado del menú móvil
+  showMobileMenu = false;
 
   constructor(private router: Router) {}
 
-  // Alterna el menú móvil
   toggleMenu(): void {
     this.showMobileMenu = !this.showMobileMenu;
   }
 
-  // Navega a la ruta y oculta el menú
   navigateTo(path: string, event: Event): void {
     event.preventDefault();
-    this.showMobileMenu = false; // Oculta el menú móvil
+    this.showMobileMenu = false;
     this.router.navigateByUrl(path)
-      .then(success => {
-        if (success) {
-          console.log('Navegación exitosa a:', path);
-        } else {
-          console.error('Error en la navegación a:', path);
-        }
-      })
-      .catch(error => {
-        console.error('Error en el enrutamiento:', error);
-      });
+      .catch(err => console.error('Error en el enrutamiento:', err));
   }
 }

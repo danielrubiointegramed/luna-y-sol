@@ -5,17 +5,16 @@
   animation: fadeIn 2s ease-in-out;
 }
 
-
 .logoH {
-  padding: 10;
+  padding: 10px;
   display: inline-block;
   width: 850px;
   height: 850px;
-  background-image: url('/luna-y-sol/browser/media/logoh.png');
+  background-image: url('/assets/images/logo.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  margin-bottom: px;
+  margin-bottom: 0; /* o el valor que necesites */
   animation: pulse 2s infinite;
 }
 
@@ -26,7 +25,9 @@
   }
 }
 
-.actividad1, .actividad2, .actividad3 {
+.actividad1,
+.actividad2,
+.actividad3 {
   background-size: cover;
   background-position: center;
   height: 350px;
@@ -34,35 +35,37 @@
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.actividad1:hover, .actividad2:hover, .actividad3:hover {
+.actividad1:hover,
+.actividad2:hover,
+.actividad3:hover {
   transform: scale(1.1);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-
 .actividad1 {
-  background-image: url('/luna-y-sol/browser/media/bien.jpg');
+  background-image: url('/assets/images/actividades/bien.jpg');
 }
 
 .actividad2 {
-  background-image: url('/luna-y-sol/browser/media/principal.jpg');
+  background-image: url('/assets/images/principal.jpg');
 }
 
 .actividad3 {
-  background-image: url('/luna-y-sol/browser/media/reservacion.jpg');
+  background-image: url('/assets/images/actividades/reservacion.jpg');
 }
 
 @keyframes wiggle {
-  0% { transform: rotate(0deg); }
-  25% { transform: rotate(2deg); }
-  50% { transform: rotate(-2deg); }
-  75% { transform: rotate(2deg); }
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(2deg); }
+  50%  { transform: rotate(-2deg); }
+  75%  { transform: rotate(2deg); }
   100% { transform: rotate(0deg); }
 }
 
 a:hover {
   animation: wiggle 0.3s ease-in-out;
 }
+
 /* 🔥 Sección Video Destacado */
 .video-container {
   display: flex;
@@ -88,7 +91,8 @@ a:hover {
 }
 
 /* 🎯 Botones de Exploración */
-.btn-explora, .btn-reserva {
+.btn-explora,
+.btn-reserva {
   background: linear-gradient(to right, #FF9002, #d67c00);
   color: #FFFAF0;
   padding: 12px 24px;
@@ -100,7 +104,8 @@ a:hover {
   cursor: pointer;
 }
 
-.btn-explora:hover, .btn-reserva:hover {
+.btn-explora:hover,
+.btn-reserva:hover {
   background: linear-gradient(to right, #402F14, #5a9219);
   transform: scale(1.05);
 }
